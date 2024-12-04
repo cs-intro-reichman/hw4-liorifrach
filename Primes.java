@@ -13,7 +13,7 @@ public class Primes {
                 IsPrime[i] = false;
             }
         }
-        double percentage = (count * 100.0) / (length - 1);
+        double percentage = (count * 100.0) / length;
         System.out.println("There are " + count + " primes between 2 and " + length + " (" + (int) percentage + "% are primes)");
     }
 
