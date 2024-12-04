@@ -3,27 +3,27 @@ public class Primes {
         int length = Integer.parseInt(args[0]);
         boolean[] IsPrime = new boolean[length + 1];
         int count = 0;
-        System.out.println("Prime numbers up tp " + length + ":");
-        for (int i = 2; i <= length; i++){
-            if(Primes.IsPrime(i)){
+        System.out.println("Prime numbers up to " + length + ":");
+        for (int i = 2; i <= length; i++) {
+            if (Primes.IsPrime(i)) {
                 IsPrime[i] = true;
-                count ++;
+                count++;
                 System.out.println(i);
-            }
-            else {
+            } else {
                 IsPrime[i] = false;
             }
         }
-        double precentage = (count * 100.0) / length;
-        System.out.println("There are " + count + " prime numbers between 2 and " + length + " (" +  (int) precentage +"% are primes)");
+        double percentage = (count * 100.0) / (length - 1);
+        System.out.println("There are " + count + " primes between 2 and " + length + " (" + (int) percentage + "% are primes)");
     }
-    public static boolean IsPrime(int n){
-        if (n <= 1){
+
+    public static boolean IsPrime(int n) {
+        if (n <= 1) {
             return false;
         }
-        for (int i = 2; i < n; i++){
-            if(n % i == 0){
-                return false; 
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false;
             }
         }
         return true;
